@@ -12,10 +12,34 @@ export function TaskProvider({ children }) {
   setTasks((prevTasks) =>
     prevTasks.filter((task) => task.id !== id)
   );
-};
+  }; 
+  const toggleComplete = (id) => {
+    setTasks((prevTasks) =>
+      prevTasks.map((task) =>
+        task.id === id ? {...task, completed: !task.completed} : task
+    )
+  );
+  };
+  const updateTask = (updatedTask) => {
+  setTasks((prevTasks) =>
+    prevTasks.map((task) =>
+      task.id === updatedTask.id
+        ? updatedTask
+        : task
+      )
+    );
+  };
 
   return (
-    <TaskContext.Provider value={{ tasks, setTasks, addTask, deleteTask }}>
+    <TaskContext.Provider 
+    value={{ 
+      tasks, 
+      setTasks, 
+      addTask, 
+      deleteTask, 
+      toggleComplete, 
+      updateTask 
+      }}>
       {children}
     </TaskContext.Provider>
   );

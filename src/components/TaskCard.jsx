@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { TaskContext } from "../context/TaskContext";
+import { Link } from "react-router-dom";
+
 function TaskCard({ task }) {
+  const {deleteTask, toggleComplete} = useContext(TaskContext);
   return (
     <div className="task-card">
       <h3>{task.title}</h3>
@@ -20,12 +25,25 @@ function TaskCard({ task }) {
         }>
             {task.completed ? "Completed" : "Pending"} 
         </span>
+      </p>
       
+      <div className="task-actions">
+
+        <Link to={`/edit/${task.id}`}>
+          <button>Edit</button>
+        </Link>
+        
+        <button
+          onClick={() => toggleComplete(task.id)}
+        >
+          {task.completed ? "Mark Pending" : "Mark Complete"}
+        </button>
+
         <button id="delete-btn" onClick={() => deleteTask(task.id)}>
                 Delete
         </button>  
+      </div>
       
-      </p>
     </div>
   );
 }

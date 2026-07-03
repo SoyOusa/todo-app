@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-function TaskForm({ onSubmit }) {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
-  const [priority, setPriority] = useState("Medium");
+function TaskForm({ onSubmit, initialTask }) {
+  const [title, setTitle] = useState(initialTask?.title || "");
+  const [description, setDescription] = useState(initialTask?.description || "");
+  const [category, setCategory] = useState(initialTask?.category || "");
+  const [priority, setPriority] = useState(initialTask?.priority || "Medium");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,16 +15,17 @@ function TaskForm({ onSubmit }) {
       return;
     }
 
-    const newTask = {
-      id: Date.now(),
-      title,
-      description,
-      category,
-      priority,
-      completed: false,
+  const task = {
+    id: initialTask?.id || Date.now(),
+    title,
+    description,
+    category,
+    priority,
+    completed: initialTask?.completed || false,
     };
 
-    onSubmit(newTask);
+
+    onSubmit(task);
 
     // Reset form
     setTitle("");
@@ -90,9 +91,9 @@ function TaskForm({ onSubmit }) {
 
       <br />
 
-      <button type="submit">
-        Add Task
-      </button>
+    <button type="submit">
+      {initialTask ? "Save Changes" : "Add Task"}
+    </button>
 
     </form>
   );

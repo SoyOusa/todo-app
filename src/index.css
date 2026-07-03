@@ -128,12 +128,36 @@ button {
 button:hover {
   background: #1d4ed8;
 }
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.task-actions button {
+  flex: 1;
+}
+.completed {
+  opacity: 0.7;
+}
+
+.completed h3 {
+  text-decoration: line-through;
+}
+
+.completed p {
+  color: #6b7280;
+}
 
 #delete-btn {
   margin-left: 200px;
   width: 85px;
   
 }
+#delete-btn:hover {
+  background: #b91c1c;
+}
+
 
 /* =========================
    Task List
