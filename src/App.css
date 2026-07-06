@@ -1,0 +1,151 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px; 
+    display: flex;
+    align-items: center;
+    gap: 18px; 
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #eef0fe;
+    color: #4f5bd5; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-icon.completed {
+    background: #e8f3ec;
+    color: #1a6b45; 
+}
+
+.stat-icon.pending {
+  background: #fff4e0;
+  color: #8a5a00;
+}
+
+.stat-icon.due {
+  background: #feecec;
+  color: #b3261e;
+}
+
+.stat-card h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.stat-card p {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+.quick-add {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.quick-add input {
+  flex: 1;
+}
+
+.quick-add button {
+  width: 110px;
+  background: #4f5bd5;
+}
+
+.task-preview {
+  background: white;
+  border: 1px solid #eef0f5;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.preview-content {
+  flex: 1;
+}
+
+.preview-content h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.preview-content p {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.priority-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.priority-badge.high {
+  background: #feecec;
+  color: #b3261e;
+}
+
+.priority-badge.medium {
+  background: #fff4e0;
+  color: #8a5a00;
+}
+
+.priority-badge.low {
+  background: #e8f3ec;
+  color: #1d6b45;
+}
+
+.preview-check-btn {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #c4c7d0;
+  border-radius: 6px;
+  background: white;
+  color: white;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.preview-check-btn.checked {
+  background: #4f5bd5;
+  border-color: #4f5bd5;
+  color: white;
+}
+
+.task-preview.completed h3 {
+  text-decoration: line-through;
+  color: #6b7280;
+}
+
+.view-all-btn {
+  font-size: 1.1rem;
+  color: #4f5bd5;
+  font-weight: bold;
+  
+  
+}
