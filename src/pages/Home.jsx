@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { TaskContext } from "../context/TaskContext";
-import TaskCard from "../components/TaskCard";
 import StatCards from "../components/StatCards";
 import QuickAdd from "../components/QuickAdd";
 import TaskPreview from "../components/TaskPreview";
@@ -10,7 +9,7 @@ function Home() {
     const { tasks, addTask, toggleComplete } = useContext(TaskContext);
 
     return (
-        <div>
+        <div className="page home-page">
             <StatCards tasks={tasks} />
             <QuickAdd onAddTask={addTask} />
             <h1>Task List</h1>

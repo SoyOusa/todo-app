@@ -8,7 +8,7 @@ function Completed() {
 
   const completedTasks = tasks.filter((task) => task.completed);
   return (
-    <div>
+    <div className="page completed-page">
       <h1>Completed Tasks</h1>
 
       {completedTasks.length === 0 ? (

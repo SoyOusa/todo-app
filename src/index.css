@@ -157,7 +157,13 @@ button:hover {
 #delete-btn:hover {
   background: #b91c1c;
 }
-
+#toggle-btn {
+  margin-left: 200px;
+  width: 80px;
+}
+#toggle-btn:hover {
+  background: #16a34a;
+}
 
 /* =========================
    Task List

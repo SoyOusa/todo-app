@@ -5,7 +5,7 @@ function AddTask() {
   const { addTask } = useContext(TaskContext);
 
   return (
-    <div>
+    <div className="page add-task-page">
       <h1>Add Task</h1>
       
       <TaskForm onSubmit={addTask} />

@@ -1,8 +1,11 @@
+import { isDueToday } from "../utils/dates";
+
+
 function StatCards({ tasks }) {
     const totalTasks = tasks.length; 
     const completedTasks = tasks.filter((task) => task.completed).length; 
     const pendingTasks = tasks.filter((task) => !task.completed).length; 
-    const dueTodayTasks = 0; 
+    const dueTodayTasks = tasks.filter((task) => isDueToday(task)).length;
 
     return (
         <div className="stats-grid">
@@ -30,7 +33,7 @@ function StatCards({ tasks }) {
                 </div>
             </div>
 
-            <div className="stat-card">
+             <div className="stat-card">
                 <div className="stat-icon due">♨</div>
                 <div>
                     <h2>{dueTodayTasks}</h2>

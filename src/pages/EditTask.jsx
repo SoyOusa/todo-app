@@ -14,7 +14,7 @@ function EditTask() {
   // If the task doesn't exist
   if (!task) {
     return (
-      <div>
+      <div className="page edit-task-page">
         <h1>Task Not Found</h1>
         <p>The task you're trying to edit does not exist.</p>
       </div>
@@ -27,7 +27,7 @@ function EditTask() {
   };
 
   return (
-    <div>
+    <div className="page edit-task-page">
       <h1>Edit Task</h1>
 
       <TaskForm
