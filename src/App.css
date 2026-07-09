@@ -303,6 +303,7 @@
   gap: 6px;
   font-size: 0.9rem;
 }
+<<<<<<< HEAD
 .dark .sort-toggle {
   color: #ffffff;
 }
@@ -314,6 +315,61 @@
 }
 
 @media (max-width: 700px) {
+=======
+
+/* 
+   Responsive Design
+*/
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .task-actions {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .task-form {
+    max-width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .task-preview {
+    flex-wrap: wrap;
+  }
+
+>>>>>>> 4cdb2c9a7377f2062bfb22410e6e0b7a6972d291
   .quick-add {
     flex-direction: column;
   }
@@ -321,6 +377,7 @@
   .quick-add button {
     width: 100%;
   }
+<<<<<<< HEAD
 
   .filters {
     flex-direction: column;
@@ -341,4 +398,6 @@
   .task-preview {
     flex-wrap: wrap;
   }
+=======
+>>>>>>> 4cdb2c9a7377f2062bfb22410e6e0b7a6972d291
 }
