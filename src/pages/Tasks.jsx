@@ -77,13 +77,16 @@ function Tasks() {
           <option value="Medium">Medium</option>
           <option value="Low">Low</option>
         </select>
+      </div>
 
-        <label className="sort-toggle">
-          <input
-            type="checkbox"
-            checked={sortByDueDate}
-            onChange={(e) => setSortByDueDate(e.target.checked)}
-          />
+      <div className="sort-toggle">
+        <input
+          id="sortDue"
+          type="checkbox"
+          checked={sortByDueDate}
+          onChange={(e) => setSortByDueDate(e.target.checked)}
+        />
+        <label htmlFor ="sortDue">
           Sort by due date
         </label>
       </div>
