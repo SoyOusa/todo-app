@@ -44,6 +44,7 @@ h1 {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 
@@ -59,10 +60,16 @@ nav a {
   padding: .6rem 1rem;
   border-radius: 8px;
   transition: .2s;
+  text-align: center;
 }
 
 nav a:hover {
   background: #f3f4f6;
+}
+
+nav a.active {
+  background: #4f5bd5;
+  color: white;
 }
 
 /* =========================
@@ -130,12 +137,20 @@ button:hover {
 }
 .task-actions {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   margin-top: 15px;
+  align-items: center;
+  justify-content: flex-start; 
 }
 
 .task-actions button {
-  flex: 1;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .completed {
   opacity: 0.7;
@@ -150,16 +165,15 @@ button:hover {
 }
 
 #delete-btn {
-  margin-left: 200px;
-  width: 85px;
+  margin-left: auto;
+  width: 36px;
   
 }
 #delete-btn:hover {
   background: #b91c1c;
 }
 #toggle-btn {
-  margin-left: 200px;
-  width: 80px;
+  width: 36px;
 }
 #toggle-btn:hover {
   background: #16a34a;
@@ -229,3 +243,37 @@ button:hover {
   padding: 3rem;
   color: #6b7280;
 }
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 700px) {
+  #root {
+    padding: 1rem;
+  }
+
+  nav {
+    gap: 0.5rem;
+  }
+
+  nav a {
+    flex: 1 1 130px;
+  }
+}
+
+@media (max-width: 420px) {
+  #root {
+    padding: 0.75rem;
+  }
+
+  nav {
+    padding: 0.75rem;
+  }
+
+  nav a {
+    flex-basis: 100%;
+  }
+}
+
+

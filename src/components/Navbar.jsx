@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
     return (
          <nav className="navbar">
-            <Link to="/">Home</Link>
-            <Link to="/tasks">Tasks</Link>
-            <Link to="/add-task">Add Task</Link>
-            <Link to="/completed">Completed</Link>
-            <Link to="/settings">Settings</Link>
+            <NavLink to="/" end>Home</NavLink>
+            <NavLink to="/tasks">Tasks</NavLink>
+            <NavLink to="/add-task">Add Task</NavLink>
+            <NavLink to="/completed">Completed</NavLink>
+            <NavLink to="/settings">Settings</NavLink>
         </nav>
     );        
 }
