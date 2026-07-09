@@ -80,24 +80,6 @@ h1 {
   font-weight: bold;
 }
 
-.nav-header {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-}
-
-.nav-brand {
-  display: inline-flex;
-  align-items: center;
-  font-weight: 700;
-  color: #111827;
-  letter-spacing: 0;
-}
-
-.nav-brand:hover {
-  color: #4f5bd5;
-}
-
 /* Hamburger button */
 .menu-btn {
   display: none;
@@ -285,36 +267,5 @@ button:hover {
   color: #6b7280;
 }
 
-/* =========================
-   Responsive
-========================= */
-
-/* @media (max-width: 768px) {
-  #root {
-    padding: 1rem;
-  }
-
-  nav {
-    gap: 0.5rem;
-  }
-
-  nav a {
-    flex: 1 1 130px;
-  }
-} */
-
-/* @media (max-width: 480px) {
-  #root {
-    padding: 0.75rem;
-  }
-
-  nav {
-    padding: 0.75rem;
-  }
-
-  nav a {
-    flex-basis: 100%;
-  }
-} */
 
 
