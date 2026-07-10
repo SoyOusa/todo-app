@@ -30,7 +30,7 @@ function QuickAdd({ onAddTask }) {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder="Quicky add a task here..."
+                placeholder="Quickly add a task here..."
             />
 
             <button type="submit">+ Add</button>
