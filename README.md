@@ -2,7 +2,7 @@
 
 A React-based task management application built for [course name] final project. Supports task creation, editing, deletion, completion tracking, filtering, and due-date sorting, with data persisted locally in the browser.
 
-**Live demo:** [add your Vercel URL]
+**Live demo:** [add your Vercel URL here]
 
 ---
 
@@ -123,4 +123,20 @@ src/
 
 ## Author
 
-[Your name] — solo project, [course name], [term/year]
+Phat Vicheymongkol, SOY Ousa, LY Chanthanou
+
+
+
+
+React + Vite
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+@vitejs/plugin-react uses Oxc
+@vitejs/plugin-react-swc uses SWC
+React Compiler
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see this documentation.
+
+Expanding the ESLint configuration
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the TS template for information on how to integrate TypeScript and typescript-eslint in your project.
