@@ -2,7 +2,7 @@
 
 A React-based task management application built for [course name] final project. Supports task creation, editing, deletion, completion tracking, filtering, and due-date sorting, with data persisted locally in the browser.
 
-**Live demo:** [add your Vercel URL here]
+**Live demo:** https://todo-app-fm88.vercel.app/
 
 ---
 
