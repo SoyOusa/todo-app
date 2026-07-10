@@ -9,9 +9,19 @@
     background: white;
     border-radius: 14px;
     padding: 24px; 
+    min-height: 98px;
     display: flex;
     align-items: center;
     gap: 18px; 
+}
+
+.stat-card > div {
+    min-width: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
 }
 
 .stat-icon {
@@ -43,10 +53,13 @@
 .stat-card h2 {
     margin: 0;
     font-size: 26px;
+    line-height: 1;
+    font-weight: 700;
 }
 
 .stat-card p {
-  margin: 4px 0 0;
+  margin: 0;
+  line-height: 1.2;
   color: #6b7280;
 }
 
@@ -154,6 +167,10 @@
   margin-bottom: 20px;
 }
 
+.filters input,
+.filters select {
+  flex: 1;
+}
 .empty-state {
   color: #6b7280;
   text-align: center;
@@ -241,6 +258,28 @@
   color: #e6e6e6;
 }
 
+.dark .navbar a:hover {
+  background: #383b45;
+  color: #ffffff;
+}
+
+.dark .navbar a.active {
+  background: #4f5bd5;
+  color: #ffffff;
+}
+
+.dark .nav-brand {
+  color: #e6e6e6;
+}
+
+.dark .menu-btn {
+  color: #e6e6e6;
+}
+
+.dark .menu-btn:hover {
+  background: #383b45;
+}
+
 .dark .preview-check-btn {
   background: #2c2f38;
   border-color: #4a4e5a;
@@ -290,17 +329,95 @@
 .sort-toggle {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 0.9rem;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.sort-toggle input {
+  width: auto;
+  margin: 0;
 }
 
-/* 
+.sort-toggle label {
+  margin: 0;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.dark .sort-toggle {
+  color: #ffffff;
+}
+
+/*
    Responsive Design
 */
 
+/* Desktop */
+@media (min-width: 769px) {
+  /* Desktop-specific styles can be added here */
+}
+
+/* Tablet */
 @media (max-width: 768px) {
+  #root {
+    padding: 1rem;
+  }
+
   .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .nav-header {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.45rem 0.7rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+
+    top: 58px;
+    left: 0;
+    right: 0;
+
+    background: white;
+
+    padding: 12px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+
+    gap: 8px;
+
+    z-index: 100;
+  }
+
+  .dark .nav-links.active {
+    background: #23262e;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.95rem;
   }
 
   .filters {
@@ -313,9 +430,8 @@
     width: 100%;
   }
 
-  .navbar {
-    flex-wrap: wrap;
-    gap: 12px;
+  .sort-toggle {
+    justify-content: flex-start;
   }
 
   .task-actions {
@@ -327,15 +443,53 @@
     max-width: 100%;
     padding: 16px;
   }
+
+  .stat-card {
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .stat-icon {
+    flex: 0 0 46px;
+  }
+
+  .stat-card h2 {
+    font-size: 24px;
+  }
+
+  .stat-card p {
+    font-size: 0.92rem;
+  }
+
+  .quick-add {
+    flex-direction: column;
+  }
+
+  .quick-add button {
+    width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 }
 
+/* Small Phone */
 @media (max-width: 480px) {
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .stat-card {
     padding: 16px;
+    gap: 12px;
   }
 
   h1 {
@@ -346,11 +500,27 @@
     flex-wrap: wrap;
   }
 
-  .quick-add {
-    flex-direction: column;
+  .stat-card h2 {
+    font-size: 22px;
   }
 
-  .quick-add button {
-    width: 100%;
+  .stat-card p {
+    font-size: 0.88rem;
+  }
+
+  #root {
+    padding: 0.75rem;
+  }
+
+  .navbar {
+    padding: 0.75rem;  
+  }
+
+  .nav-links.active {
+    padding: 10px;
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.65rem;
   }
 }

@@ -42,9 +42,9 @@ h1 {
    Navbar
 ========================= */
 
-nav {
+.navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 1rem;
 
   background: white;
@@ -53,18 +53,72 @@ nav {
 
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.05);
-}
 
-nav a {
+  position: relative;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a{
   padding: .6rem 1rem;
   border-radius: 8px;
   transition: .2s;
+  text-align: center;
 }
 
-nav a:hover {
+.nav-links a:hover {
   background: #f3f4f6;
 }
 
+.nav-links a.active {
+  background: #4f5bd5;
+  color: white;
+}
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 0;
+  gap: .75rem;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.nav-brand:hover {
+  color: #4f5bd5;
+}
+
+/* Hamburger button */
+.menu-btn {
+  display: none;
+
+  border: none;
+  background: transparent;
+  flex-shrink: 0;
+  color: #111827;
+
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.menu-btn:hover {
+  background: #f3f4f6;
+}
 /* =========================
    Form
 ========================= */
@@ -130,12 +184,20 @@ button:hover {
 }
 .task-actions {
   display: flex;
-  gap: 10px;
+  gap: 14px;
   margin-top: 15px;
+  align-items: center;
+  justify-content: flex-start; 
 }
 
 .task-actions button {
-  flex: 1;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .completed {
   opacity: 0.7;
@@ -150,16 +212,15 @@ button:hover {
 }
 
 #delete-btn {
-  margin-left: 200px;
-  width: 85px;
+  margin-left: auto;
+  width: 36px;
   
 }
 #delete-btn:hover {
   background: #b91c1c;
 }
 #toggle-btn {
-  margin-left: 200px;
-  width: 80px;
+  width: 36px;
 }
 #toggle-btn:hover {
   background: #16a34a;
@@ -229,3 +290,6 @@ button:hover {
   padding: 3rem;
   color: #6b7280;
 }
+
+
+

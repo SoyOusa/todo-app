@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { TaskContext } from "../context/TaskContext";
 import { Link } from "react-router-dom";
 import { isOverdue, isDueToday } from "../utils/dates";
+import { Trash2, Pencil, Check } from "lucide-react";
 
 
 function TaskCard({ task }) {
@@ -47,16 +48,26 @@ function TaskCard({ task }) {
       
       <div className="task-actions">
         <Link to={`/edit/${task.id}`}>
-          <button>Edit</button>
+          <button title="Edit">
+            <Pencil size={18} />
+          </button>
         </Link>
-        
-        <button id="toggle-btn" onClick={() => toggleComplete(task.id)}>
-          {task.completed ? "Mark Pending" : "Mark Complete"}
+
+        <button
+          id="toggle-btn"
+          title={task.completed ? "Mark pending" : "Mark complete"}
+          onClick={() => toggleComplete(task.id)}
+        >
+          <Check size={18} />
         </button>
 
-        <button id="delete-btn" onClick={() => deleteTask(task.id)}>
-          Delete
-        </button>  
+        <button
+          id="delete-btn"
+          title="Delete"
+          onClick={() => deleteTask(task.id)}
+        >
+          <Trash2 size={18} />
+        </button>
       </div>
       
     </div>
