@@ -524,3 +524,48 @@
     padding: 0.4rem 0.65rem;
   }
 }
+
+.trash-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.trash-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid #eef0f5;
+  border-radius: 10px;
+}
+
+.trash-meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+.trash-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.dark .trash-item {
+  border-color: #383b45;
+}
+
+.dark .trash-meta {
+  color: #6b7280;
+}
+
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #e6e6e6;
+}
+
+.dark .trash-item strong {
+  color: #e6e6e6;
+}

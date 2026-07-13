@@ -4,9 +4,8 @@ import { Link } from "react-router-dom";
 import { isOverdue, isDueToday } from "../utils/dates";
 import { Trash2, Pencil, Check } from "lucide-react";
 
-
 function TaskCard({ task }) {
-  const {deleteTask, toggleComplete} = useContext(TaskContext);
+  const { deleteTask, toggleComplete } = useContext(TaskContext);
   const overdue = isOverdue(task);
   const dueToday = isDueToday(task);
 
@@ -23,7 +22,7 @@ function TaskCard({ task }) {
       <p>
         <strong>Priority:</strong> {task.priority}
       </p>
-      
+
       <p>
         <strong>Due:</strong>{" "}
         {task.dueDate ? (
@@ -39,13 +38,11 @@ function TaskCard({ task }) {
 
       <p>
         <strong>Status:</strong>{" "}
-        <span className={
-            task.completed ? "status-completed" : "status-pending"
-        }>
-            {task.completed ? "Completed" : "Pending"} 
+        <span className={task.completed ? "status-completed" : "status-pending"}>
+          {task.completed ? "Completed" : "Pending"}
         </span>
       </p>
-      
+
       <div className="task-actions">
         <Link to={`/edit/${task.id}`}>
           <button title="Edit">
@@ -64,12 +61,15 @@ function TaskCard({ task }) {
         <button
           id="delete-btn"
           title="Delete"
-          onClick={() => deleteTask(task.id)}
+          onClick={() => {
+            if (window.confirm(`Delete "${task.title}"? You can restore it from the trash later.`)) {
+              deleteTask(task.id);
+            }
+          }}
         >
           <Trash2 size={18} />
         </button>
       </div>
-      
     </div>
   );
 }
