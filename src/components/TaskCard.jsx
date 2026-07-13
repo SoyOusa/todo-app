@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
 import { Link } from "react-router-dom";
 import { isOverdue, isDueToday } from "../utils/dates";
 import { Trash2, Pencil, Check } from "lucide-react";
 
 function TaskCard({ task }) {
-  const { deleteTask, toggleComplete } = useContext(TaskContext);
+  const { deleteTask, toggleComplete } = useTask();
   const overdue = isOverdue(task);
   const dueToday = isDueToday(task);
 

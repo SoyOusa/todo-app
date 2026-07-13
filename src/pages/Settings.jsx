@@ -1,8 +1,8 @@
-import { useContext, useState, useEffect } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
+import { useState, useEffect } from "react";
 
 export default function Settings() {
-  const { tasks, deleteTask, deletedTasks, restoreTask, permanentlyDeleteTask, emptyTrash } = useContext(TaskContext);
+  const { tasks, deleteTask, deletedTasks, restoreTask, permanentlyDeleteTask, emptyTrash } = useTask();
   const [darkMode, setDarkMode] = useState(() => {
     const theme = localStorage.getItem("theme");
     if (theme === null) {

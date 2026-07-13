@@ -1,9 +1,9 @@
-import { useContext, useState } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
 import TaskCard from "../components/TaskCard";
+import {useState } from "react"; 
 
 function Tasks() {
-  const { tasks } = useContext(TaskContext);
+  const { tasks } = useTask();
 
   // Three independent filter/sort controls — each is its own piece of
   // component state because they're set by separate UI elements and
