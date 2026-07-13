@@ -56,7 +56,6 @@ export function TaskProvider({ children }) {
   // Strict Mode, which can double-insert the task into deletedTasks.
   const deleteTask = (id) => {
     const taskToDelete = tasks.find((task) => task.id === id);
-    console.log("deleteTask called with id:", id, "found:", taskToDelete);  // TEMP — remove after debugging
     if (!taskToDelete) return;
 
     setDeletedTasks((prevDeleted) => [
