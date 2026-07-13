@@ -8,13 +8,13 @@ function QuickAdd({ onAddTask }) {
 
         if(!title.trim()) {
             return; 
-        }
+        }``
 
         const newTask = {
             id: Date.now(),
             title, 
             description: "",
-            category: null,
+            category: "General",
             priority: "Medium",
             completed: false, 
             completedAt: null, 
