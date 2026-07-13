@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
-import { TaskProvider } from './context/TaskContext.jsx'
+import { TaskProvider } from './context/TaskProvider.jsx'
 
 // Check for saved theme in localStorage and apply it
 

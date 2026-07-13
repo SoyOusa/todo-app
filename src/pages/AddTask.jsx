@@ -1,8 +1,7 @@
-import { useContext } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
 import TaskForm from "../components/TaskForm";
 function AddTask() {
-  const { addTask } = useContext(TaskContext);
+  const { addTask } = useTask();
 
   return (
     <div className="page add-task-page">

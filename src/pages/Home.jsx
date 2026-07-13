@@ -1,12 +1,11 @@
-import { useContext } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
 import StatCards from "../components/StatCards";
 import QuickAdd from "../components/QuickAdd";
 import TaskPreview from "../components/TaskPreview";
 import { Link } from "react-router-dom";
 
 function Home() {
-    const { tasks, addTask, toggleComplete } = useContext(TaskContext);
+    const { tasks, addTask, toggleComplete } = useTask();
 
     return (
         <div className="page home-page">

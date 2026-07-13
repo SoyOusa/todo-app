@@ -1,6 +1,5 @@
-import { createContext, useState, useEffect } from "react";
-
-export const TaskContext = createContext();
+import { useState, useEffect } from "react"; 
+import { TaskContext } from "./TaskContext"
 
 export function TaskProvider({ children }) {
   const STORAGE_KEY = "tasks";

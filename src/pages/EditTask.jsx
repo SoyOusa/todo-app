@@ -1,13 +1,12 @@
-import { useContext } from "react";
+import { useTask } from "../context/TaskContext"; 
 import { useNavigate, useParams } from "react-router-dom";
-import { TaskContext } from "../context/TaskContext";
 import TaskForm from "../components/TaskForm";
 
 function EditTask() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { tasks, updateTask } = useContext(TaskContext);
+  const { tasks, updateTask } = useTask(); 
 
   const task = tasks.find((task) => task.id === Number(id));
 

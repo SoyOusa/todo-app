@@ -1,9 +1,9 @@
 // pages/Settings.jsx
-import { useContext, useState, useEffect } from "react";
-import { TaskContext } from "../context/TaskContext";
+import { useTask } from "../context/TaskContext";
+import {useState, useEffect} from "react";
 
 export default function Settings() {
-  const { setTasks } = useContext(TaskContext);
+  const { setTasks } = useTask();
   const [darkMode, setDarkMode] = useState(() => {
     const theme = localStorage.getItem("theme");
     if (theme === null) {
